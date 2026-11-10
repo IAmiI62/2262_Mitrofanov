@@ -30,7 +30,7 @@ print(i)
 
 #### Решение:
 
-```python
+```
 x = [int(t) for t in input().split()]
 i = 0
 while i < len(x) - 1 and i <= x[i] <= 2 * i:
@@ -66,7 +66,7 @@ print(i)
 
 #### Решение:
 
-```python
+```
 x = [int(t) for t in input().split()]
 i = 0
 while i < len(x) - 1 and (x[i] < i or 2 * i <= x[i] < 3 * i or x[i] >= 4 * i):
@@ -81,7 +81,7 @@ print(i)
 
 #### Решение:
 
-```java
+```
 public class Main {
     public static void main(String[] args) {
         int[][] a = {{5,3,8},{2,7,1},{4,0,6},{9,0,2}};
@@ -123,7 +123,7 @@ print(*b)
 #### Решение:
 Вывод:
 
-```text
+```
 9 7 5 3 1
 ```
 
@@ -136,7 +136,7 @@ print(*b)
 
 #### Решение:
 
-```cpp
+```
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -194,7 +194,7 @@ forc(i, from, to)
 
 Макрос:
 
-```cpp
+```
 // forc.h
 #pragma once
 #define forc(i, from, to) \
@@ -204,7 +204,7 @@ forc(i, from, to)
 
 Демонстрация 1 — счётчик нельзя менять:
 
-```cpp
+```
 #include <iostream>
 #include "forc.h"
 using namespace std;
@@ -223,7 +223,7 @@ int main() {
 
 Демонстрация 2 — граница вычисляется один раз:
 
-```cpp
+```
 #include <iostream>
 #include "forc.h"
 using namespace std;
@@ -256,7 +256,7 @@ int main() {
 Решение:
 Python:
 
-```python
+```
 numbers = [int(t) for t in input().split()]
 for x in numbers:
     if x < 0:
@@ -306,7 +306,7 @@ A = { (x,y)| x ∈ [5;∞), y ∈ [-5;∞)}.
 
 #### Решение:
 
-```text
+```
 A0 = { (x, y) | x ∈ [5; ∞), y ∈ [-5; ∞) }
 
 A1 = { (x, y) | x ∈ (-∞; 0), y ∈ ℝ }
@@ -378,7 +378,7 @@ print(right)
 
 #### Решение:
 
-```cpp
+```
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -405,7 +405,7 @@ int main() {
 
 #### Решение:
 
-```cpp
+```
 extern "C" {
 int sum_while(int n)    { int s = 0, i = 0; while (i < n) { s += i; i++; } return s; }
 int sum_do_while(int n) { int s = 0, i = 0; do { s += i; i++; } while (i < n); return s; }
@@ -416,10 +416,3 @@ int clamp_short(int x)  { if (x < 0) x = 0; return x; }
 int abs_ternary(int x)  { return x < 0 ? -x : x; }
 }
 ```
-
-Сборка без оптимизации:
-
-```bash
-g++ -O0 -S -masm=intel -fno-asynchronous-unwind-tables -fcf-protection=none constructs.cpp
-```
-
