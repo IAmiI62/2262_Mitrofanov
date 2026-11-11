@@ -66,6 +66,13 @@ def sublist(lst, *indices):
 6143
 ```
 
+#### Решение
+
+```
+lst = list(range(6000 ,7000))
+x = max(lst, key = lamda x: bin(x).count('1'))
+print(x)
+```
 
 ### Задание 4 **(2)**
 
@@ -81,7 +88,13 @@ def sublist(lst, *indices):
 >>> print (lst)
 ['bye', 'hell', 'babye', 'hello', 'world']
 ```
-
+#### Решение
+```
+ lst = ['hello', 'hell', 'bye', 'world', 'bybye']
+ lst.sort(key = lambda x: (len(x), x))
+lst
+['bye', 'hell', 'bybye', 'hello', 'world']
+```
 ### Задание 5 **(2)**
 
 *Напишите программу для решения следующей задачи.*
