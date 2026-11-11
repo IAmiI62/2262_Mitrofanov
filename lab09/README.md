@@ -47,10 +47,7 @@ print (*l, **d)
 программа
 ```
 def sublist(lst, *indices):
-    res = []
-    for i in indices:
-        res.append(lst[i])
-    return res
+    return [lst[i] for i in indices]
 ```
 
 ### Задание 3 **(1)**
