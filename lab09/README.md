@@ -180,20 +180,12 @@ def every_other(seq):
 #### Решение 
 
 ```
-def gen(x):
-    yield x
-    while x != 1:
-        if x%2 == 0:
-            x //= 2
-        else :
-            x = 3*x +1
-        yield x
 def every_other(seq):
-    it = iter(seq)
-    x = next(it) 
-    while :
-        x = next(it)
-        yield x
+    is_even = True
+    for item in seq:
+        if is_even:
+            yield item
+        is_even = not is_even
 ```
 
 
