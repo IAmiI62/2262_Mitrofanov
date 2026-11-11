@@ -126,6 +126,7 @@ print (
          ),sep =','
     )
 ```
+
 ### Задание 6 **(2)**
 
 *Запишите генератор в форме функции, который будет создавать
@@ -140,6 +141,18 @@ print (
 ```
 >>> print (*gen(7))
 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+```
+
+#### Решение 
+```
+def gen(x):
+    yield x
+    while x != 1:
+        if x%2 == 0:
+            x //= 2
+        else :
+            x = 3*x +1
+        yield x
 ```
 
 ### Задание 7 **(2)**
@@ -164,6 +177,24 @@ def every_other(seq):
 21
 ```
 
+#### Решение 
+
+```
+def gen(x):
+    yield x
+    while x != 1:
+        if x%2 == 0:
+            x //= 2
+        else :
+            x = 3*x +1
+        yield x
+def every_other(seq):
+    it = iter(seq)
+    x = next(it) 
+    while :
+        x = next(it)
+        yield x
+```
 
 
 ### Задание 8 **(2)**
